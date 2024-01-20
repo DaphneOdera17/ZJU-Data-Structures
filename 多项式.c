@@ -14,6 +14,8 @@ double f(int n, double a[], double x)
     double p = a[0];
     for(int i = 1; i <= n; i ++)
     {
+        // 每次执行 i 次乘法
+        // 一共执行了 (1 + 2 + ... + n) = (n^2 + n) / 2 次乘法
         p += (a[i] * pow(x, i));
     }
     return p;
@@ -25,6 +27,8 @@ double f_Plus(int n, double a[], double x)
     double p = a[n];
     for(int i = n; i > 0; i --)
     {
+        // 每次只执行 1 次乘法
+        // 一共执行了 n 次乘法
         p = a[i - 1] + x * p;
     }
     return p;

@@ -12,6 +12,7 @@ void PrintN(int N)
 // 递归方法
 void printN(int N)
 {
+    // 占用空间的大小跟 N 呈线性相关
     if(N)
     {
         printN(N - 1);
